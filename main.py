@@ -1,16 +1,28 @@
-# This is a sample Python script.
+from aiogram import Bot, Dispatcher, executor, types
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+API_TOKEN = 'token'
 
-
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+bot = Bot(token=API_TOKEN)
+dp = Dispatcher(bot)
 
 
-# Press the green button in the gutter to run the script.
+@dp.message_handler(commands=['start'])
+async def process_start(message: types.Message):
+    await message.reply("Привіт! Введи назву книги, яку хочеш знайти на просторах інтернету :)")
+
+
+@dp.message_handler()
+async def process_start(message: types.Message):
+    await message.reply("Оброблюю повідомлення")
+
+
+class Yakaboo():
+    pass
+
+
+class LavkaBabuin():
+    pass
+
+
 if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+    executor.start_polling(dp, skip_updates=True)
