@@ -12,6 +12,7 @@ frozenlist==1.2.0
 idna==3.3
 lxml==4.7.1
 multidict==5.2.0
+pip==21.1.2
 pytz==2021.3
 requests==2.27.1
 soupsieve==2.3.1
