@@ -5,7 +5,7 @@ from parse import parse
 
 logging.basicConfig(level=logging.INFO)
 
-API_TOKEN = '5002816244:AAFaHn6rEzLX_lSsJ0Nj6kQb06jMTbBGmaY'
+API_TOKEN = 'token'
 
 bot = Bot(token=API_TOKEN)
 dp = Dispatcher(bot)
@@ -19,7 +19,7 @@ async def process_start(message: types.Message):
 @dp.message_handler(commands=['help'])
 async def process_start(message: types.Message):
     await message.reply("""Щоб використати бота, потрібно ввести назву книги, яку хочеш знайти.
-Наприклад: Гаррі Поттер."
+Наприклад: Гаррі Поттер.
 Якщо такої книги нема, то бот повідомить вам про це.""")
 
 
