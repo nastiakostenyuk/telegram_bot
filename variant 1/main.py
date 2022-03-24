@@ -5,7 +5,7 @@ from parse import parse
 
 logging.basicConfig(level=logging.INFO)
 
-API_TOKEN = '5002816244:AAFaHn6rEzLX_lSsJ0Nj6kQb06jMTbBGmaY'
+API_TOKEN = 'token'
 
 bot = Bot(token=API_TOKEN)
 dp = Dispatcher(bot)
