@@ -17,13 +17,20 @@ async def process_start(message: types.Message):
     await message.reply("Привіт! Введи назву книги, яку хочеш знайти на просторах інтернету :)")
 
 
+@dp.message_handler(commands=['help'])
+async def process_start(message: types.Message):
+    await message.reply("Щоб використати бота, потрібно ввести назву книги, яку хочеш знайти."
+                        "Наприклад: Гаррі Поттер"
+                        "Якщо такої книги нема, то бот повідомить вам про це.")
+
+
 @dp.message_handler()
 async def process_start(message: types.Message):
     first_site = parse2.Yakaboo(message.text)
     answer = first_site.create_sessions()
     get_page = first_site.get_html(answer)
     try:
-        result_firs_site = list(map(first_site.parse_informations, get_page))
+        result_firs_site = list(map(first_site.parse_information, get_page))
     except KeyError:
         result_firs_site = [first_site.link]
     except TypeError:

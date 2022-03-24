@@ -10,7 +10,7 @@ def parse(search_book: str) -> list:
     answer_site = create_sessions(url)
     get_page = get_information(answer_site)
     try:
-        result_firs_site = list(map(parse_informations, get_page))
+        result_firs_site = list(map(parse_information, get_page))
     except KeyError:
         result_firs_site = [url]
     except TypeError:

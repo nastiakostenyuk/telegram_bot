@@ -28,5 +28,5 @@ class Yakaboo:
             news_block_list = soup.select(".product-name")
         return news_block_list
 
-    def parse_informations(self, html_page):
+    def parse_information(self, html_page):
         return html_page["href"]
