@@ -1,7 +1,11 @@
+import logging
+
 from aiogram import Bot, Dispatcher, executor, types
 from parse import parse
 
-API_TOKEN = 'token'
+logging.basicConfig(level=logging.INFO)
+
+API_TOKEN = '5002816244:AAFaHn6rEzLX_lSsJ0Nj6kQb06jMTbBGmaY'
 
 bot = Bot(token=API_TOKEN)
 dp = Dispatcher(bot)

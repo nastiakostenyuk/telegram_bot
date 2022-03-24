@@ -42,5 +42,5 @@ def get_information(site_response:requests.models.Response) -> list:
     return news_block_list
 
 
-def parse_informations(html_page):
+def parse_information(html_page):
     return html_page["href"]
